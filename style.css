@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #000000;
+}
+
+/* Header */
+header {
+    background-color: #291010; /* Dark green background for a professional look */
+    color: #fff; /* White text color */
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Center items vertically */
+    padding: 20px 40px; /* Adjusted padding for a balanced layout */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+}
+
+.logo img {
+    width: 75px; /* Logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+header .logo {
+    display: flex; /* Flex for logo and text alignment */
+    align-items: center; /* Center logo and text vertically */
+    font-size: 32px; /* Font size for logo text */
+    font-weight: bold; /* Bold text */
+    color: #f4a261; /* Change logo text color for contrast */
+}
+
+header nav {
+    flex-grow: 1; /* Allow navigation to take available space */
+    display: flex; /* Flexbox for menu */
+    justify-content: center; /* Center the navigation links */
+}
+
+header nav ul {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Display items in a row */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+header nav ul li {
+    margin: 0 15px; /* Margin on left and right */
+    font-size: 18px; /* Slightly smaller font size */
+    position: relative; /* For dropdown positioning */
+}
+
+header nav ul li a {
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline */
+    padding: 5px 10px; /* Padding for links */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+header nav ul li a:hover {
+    background-color: #ff5733; /* Background color on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #f4a261; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.cta-button:hover {
+    background-color: #e76f51; /* Darker shade on hover */
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 30px; /* Size of the hamburger icon */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav {
+        display: none; /* Hide navigation by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Absolute positioning */
+        top: 70px; /* Position below header */
+        right: 0; /* Align to the right */
+        background-color: #1a3c20; /* Background color matches header */
+        width: 100%; /* Full width */
+        padding: 20px 0; /* Padding for the nav */
+        z-index: 10; /* Keep it on top */
+    }
+
+    header nav.active {
+        display: flex; /* Show nav when active */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Margin for vertical spacing */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
+
+/* Submenu Styles */
+.submenu {
+    display: none; /* Hide submenu by default */
+}
+
+.submenu-toggle.active + .submenu {
+    display: block; /* Show submenu when active */
+}
+
+
+/* Call to Action Button */
+.cta-button {
+    background-color: #f4a261; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.cta-button:hover {
+    background-color: #e76f51; /* Darker shade on hover */
+}
+/* Hero Section */
+.hero {
+    position: relative;                /* Position relative for absolute positioning of video */
+    height: 100vh;                    /* Full height of the viewport */
+    overflow: hidden;                 /* Hide overflow */
+}
+
+.background-video {
+    position: absolute;               /* Position absolute for full coverage */
+    top: 50%;                        /* Center video vertically */
+    left: 50%;                       /* Center video horizontally */
+    min-width: 100%;                 /* Full width */
+    min-height: 100%;                /* Full height */
+    width: auto;                     /* Auto width for aspect ratio */
+    height: auto;                    /* Auto height for aspect ratio */
+    z-index: 1;                      /* Send video behind content */
+    transform: translate(-50%, -50%); /* Center video */
+    object-fit: cover;               /* Cover to maintain aspect ratio */
+}
+
+.hero-content {
+    position: relative;              /* Position relative to allow layering */
+    z-index: 2;                     /* Place content above video */
+    color: white;                   /* Text color */
+    text-align: center;             /* Center text */
+    padding: 20px;                  /* Padding for content */
+}
+
+.hero-content h1{
+    color: black;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 350px;
+}
+
+.cta-button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #c44228;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured Book Section */
+.featured-book {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+.featured-book img {
+    width: 300px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;  /* Add margin at the bottom for spacing in mobile view */
+    flex: 1 1 auto;
+}
+
+.featured-book .book-info {
+    max-width: 600px;
+    flex: 1 1 100%;
+    text-align: left;   /* Ensure the text is left-aligned */
+}
+.featured-book .book-info p{
+    margin-bottom: 2rem;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+    width: 0;
+    height: 75px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 20px;   /* Add margin for mobile view */
+    border-radius: 50%;
+    flex: 1 1 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about .about-info {
+    max-width: 600px;
+    flex: 1 1 100%;
+    text-align: left;   /* Ensure the text is left-aligned */
+
+}
+.about .about-info p{
+    margin-bottom: 2rem;
+}
+
+/* Follow Me Section */
+.follow-me {
+    padding: 50px;
+    background-color: #444; /* Darker background for better contrast */
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    border-top: 2px solid #ff5733; /* Adding a top border for emphasis */
+}
+
+.follow-me h2 {
+    font-size: 32px; /* Increased font size */
+    margin-bottom: 20px;
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.follow-me .social-links {
+    margin-top: 20px;
+}
+
+.follow-me .social-links a {
+    margin: 0 15px; /* Increased margin for spacing */
+    color: #ff5733; /* Change link color to match the hover effect */
+    text-decoration: none;
+    font-size: 20px; /* Increased font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.follow-me .social-links a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+/* Footer */
+footer {
+    padding: 30px 20px; /* Adjusted padding for better spacing */
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-top: 2px solid #ff5733; /* Adding a top border for consistency */
+}
+
+footer .social-links {
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+footer .social-links a {
+    color: #ff5733; /* Change link color to match the hover effect */
+    text-decoration: none;
+    margin: 0 10px; /* Spacing between social links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+footer .social-links a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px; /* Adjusted font size for footer text */
+}
+
+
+/* Media Queries */
+
+/* Tablet and small desktop screens */
+@media (max-width: 1024px) {
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .featured-book, .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .featured-book img, .about img {
+        margin: 0 auto 20px auto;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .featured-book img {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+    .about img {
+        width: 150px;
+    }
+
+    .follow-me h2 {
+        font-size: 24px;
+    }
+
+    .social-links a {
+        font-size: 16px;
+    }
+
+    .hero {
+        height: 300px;
+    }
+}
