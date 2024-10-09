@@ -1,9 +1,11 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     font-family: Helvetica, sans-serif;
     line-height: 1.6;
@@ -13,125 +15,66 @@ body {
 
 /* Header */
 header {
-    background-color: #291010; /* Dark green background for a professional look */
-    color: #fff; /* White text color */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between logo and navigation */
-    align-items: center; /* Center items vertically */
-    padding: 20px 40px; /* Adjusted padding for a balanced layout */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+    background-color: #291010; 
+    color: #fff; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px; /* Adjusted padding for symmetry */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    position: relative; /* Position relative for absolute positioning of logo and button */
+}
+
+/* Logo */
+.logo {
+    display: flex; 
+    align-items: center; 
+    font-size: 2.5rem; /* Responsive font size */
+    color: #f4a261; 
+    width: auto; /* Adjusted for proper alignment */
+    justify-content: flex-start; /* Align items to the start */
+    margin-right: auto; /* Push the hamburger to the right */
 }
 
 .logo img {
-    width: 75px; /* Logo width */
-    height: auto; /* Maintain aspect ratio */
-}
-
-header .logo {
-    display: flex; /* Flex for logo and text alignment */
-    align-items: center; /* Center logo and text vertically */
-    font-size: 32px; /* Font size for logo text */
-    font-weight: bold; /* Bold text */
-    color: #f4a261; /* Change logo text color for contrast */
-}
-
-header nav {
-    flex-grow: 1; /* Allow navigation to take available space */
-    display: flex; /* Flexbox for menu */
-    justify-content: center; /* Center the navigation links */
-}
-
-header nav ul {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Display items in a row */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
-
-header nav ul li {
-    font-weight: bolder;
-    margin: 0 15px; /* Margin on left and right */
-    font-size: 15px; /* Slightly smaller font size */
-    position: relative; /* For dropdown positioning */
-}
-
-header nav ul li a {
-    color: #fff; /* White text for links */
-    text-decoration: none; /* Remove underline */
-    padding: 5px 10px; /* Padding for links */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-}
-
-header nav ul li a:hover {
-    background-color: #ff5733; /* Background color on hover */
-    border-radius: 5px; /* Rounded corners */
-}
-
-/* Call to Action Button */
-.cta-button {
-    
-    background-color: #f4a261; /* Button background color */
-    color: #fff; /* Button text color */
-    padding: 10px 20px; /* Padding for button */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-}
-
-.cta-button:hover {
-    background-color: #e76f51; /* Darker shade on hover */
+    width: 50px; /* Responsive logo width */
+    height: auto; 
+    margin-right: 10px; /* Space between logo and text */
 }
 
 /* Hamburger Menu */
 .hamburger {
-    display: none; /* Hidden by default */
+    display: none; /* Initially hidden */
     font-size: 30px; /* Size of the hamburger icon */
     cursor: pointer; /* Pointer on hover */
+    color: #fff; /* Color of the hamburger icon */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav {
-        display: none; /* Hide navigation by default */
-        flex-direction: column; /* Stack items vertically */
-        position: absolute; /* Absolute positioning */
-        top: 70px; /* Position below header */
-        right: 0; /* Align to the right */
-        background-color: #1a3c20; /* Background color matches header */
-        width: 100%; /* Full width */
-        padding: 20px 0; /* Padding for the nav */
-        z-index: 10; /* Keep it on top */
-    }
-
-    header nav.active {
-        display: flex; /* Show nav when active */
-    }
-
-    header nav ul {
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Full width */
-    }
-
-    header nav ul li {
-        margin: 10px 0; /* Margin for vertical spacing */
-        text-align: center; /* Center text for mobile */
-    }
-
-    .hamburger {
-        display: block; /* Show hamburger icon on mobile */
-    }
+/* Navigation Styles */
+header nav {
+    flex-grow: 1; 
 }
 
-/* Submenu Styles */
-.submenu {
-    display: none; /* Hide submenu by default */
+header nav ul {
+    list-style: none; 
+    display: flex; 
+    padding: 0; 
+    margin: 0; 
+    justify-content: center; /* Center navigation items */
 }
 
-.submenu-toggle.active + .submenu {
-    display: block; /* Show submenu when active */
+header nav ul li {
+    font-weight: bolder;
+    margin: 0 15px; 
 }
 
+header nav ul li a {
+    color: #fff; 
+    text-decoration: none; 
+    padding: 5px 10px; 
+    transition: background-color 0.3s ease; 
+}
 
 /* Call to Action Button */
 .cta-button {
@@ -148,6 +91,51 @@ header nav ul li a:hover {
 .cta-button:hover {
     background-color: #e76f51; /* Darker shade on hover */
 }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo {
+        margin-bottom: 10px; /* Space below logo */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on mobile */
+    }
+
+    header nav {
+        display: none; /* Hide navigation by default */
+    }
+
+    header nav.active {
+        display: flex; /* Show nav when active */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Absolute positioning */
+        top: 70px; /* Position below header */
+        right: 0; /* Align to the right */
+        background-color: #291010; /* Matches header */
+        width: 100%; /* Full width */
+        padding: 20px 0; /* Padding for the nav */
+        z-index: 10; /* Keep it on top */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Margin for vertical spacing */
+        text-align: center; /* Center text for mobile */
+    }
+
+    .cta-button {
+        width: 100%; /* Full width on small screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin-top: 10px; /* Space above button */
+    }
+}
+
 /* Hero Section */
 .hero {
     position: relative;                /* Position relative for absolute positioning of video */
@@ -176,27 +164,11 @@ header nav ul li a:hover {
     padding: 20px;                  /* Padding for content */
 }
 
-.hero-content h1{
+.hero-content h1 {
     color: black;
     font-weight: bolder;
     font-size: 30px;
     margin-top: 350px;
-}
-
-.cta-button {
-    background-color: #ff5733;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    
-    font-size: 16px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:hover {
-    background-color: #c44228;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Featured Book Section */
@@ -226,7 +198,8 @@ header nav ul li a:hover {
     flex: 1 1 100%;
     text-align: left;   /* Ensure the text is left-aligned */
 }
-.featured-book .book-info p{
+
+.featured-book .book-info p {
     margin-bottom: 2rem;
 }
 
@@ -259,9 +232,9 @@ header nav ul li a:hover {
     max-width: 600px;
     flex: 1 1 100%;
     text-align: left;   /* Ensure the text is left-aligned */
-
 }
-.about .about-info p{
+
+.about .about-info p {
     margin-bottom: 2rem;
 }
 
@@ -325,7 +298,6 @@ footer p {
     margin-top: 10px;
     font-size: 14px; /* Adjusted font size for footer text */
 }
-
 
 /* Media Queries */
 
@@ -400,7 +372,7 @@ footer p {
         margin-left: 10px; /* Space between image and text */
     }
     
-    /* Responsive adjustments */
+    /* Further adjustments */
     @media (max-width: 768px) {
         .logo img {
             width: 120px; /* Adjust logo size for smaller screens */
@@ -421,21 +393,19 @@ footer p {
         }
     }
 
-    /* Responsive adjustments */
-@media (max-width: 768px) {
-    .cta-button {
-        margin-left: 20px;
-        padding: 10px 20px; /* Adjust padding for smaller screens */
-        font-size: 16px; /* Adjust font size for smaller screens */
+    /* Responsive adjustments for button */
+    @media (max-width: 768px) {
+        .cta-button {
+            margin-left: 0; /* Remove left margin */
+            padding: 10px; /* Adjust padding for smaller screens */
+            font-size: 16px; /* Adjust font size for smaller screens */
+        }
     }
-}
 
-@media (max-width: 480px) {
-    .cta-button {
-        margin-left: 20px;
-        padding: 8px 16px; /* Further adjust padding for very small screens */
-        font-size: 14px; /* Further adjust font size for very small screens */
+    @media (max-width: 480px) {
+        .cta-button {
+            padding: 8px 16px; /* Further adjust padding for very small screens */
+            font-size: 14px; /* Further adjust font size for very small screens */
+        }
     }
-}
-    
 }
