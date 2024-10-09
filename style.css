@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #000000;
@@ -49,8 +49,9 @@ header nav ul {
 }
 
 header nav ul li {
+    font-weight: bolder;
     margin: 0 15px; /* Margin on left and right */
-    font-size: 18px; /* Slightly smaller font size */
+    font-size: 15px; /* Slightly smaller font size */
     position: relative; /* For dropdown positioning */
 }
 
@@ -68,6 +69,7 @@ header nav ul li a:hover {
 
 /* Call to Action Button */
 .cta-button {
+    
     background-color: #f4a261; /* Button background color */
     color: #fff; /* Button text color */
     padding: 10px 20px; /* Padding for button */
@@ -133,6 +135,7 @@ header nav ul li a:hover {
 
 /* Call to Action Button */
 .cta-button {
+    margin-left: 10px;
     background-color: #f4a261; /* Button background color */
     color: #fff; /* Button text color */
     padding: 10px 20px; /* Padding for button */
@@ -378,4 +381,61 @@ footer p {
     .hero {
         height: 300px;
     }
+
+    .logo {
+        display: flex; /* Use flexbox for alignment */
+        align-items: center; /* Center items vertically */
+        justify-content: center; /* Center items horizontally */
+        padding: 10px; /* Add some padding */
+    }
+    
+    .logo img {
+        max-width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        width: 150px; /* Set a base width */
+    }
+    
+    .logo span {
+        font-size: 24px; /* Base font size */
+        margin-left: 10px; /* Space between image and text */
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .logo img {
+            width: 120px; /* Adjust logo size for smaller screens */
+        }
+    
+        .logo span {
+            font-size: 20px; /* Adjust font size for smaller screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .logo img {
+            width: 100px; /* Further adjust logo size for very small screens */
+        }
+    
+        .logo span {
+            font-size: 15px; /* Further adjust font size for very small screens */
+        }
+    }
+
+    /* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-button {
+        margin-left: 20px;
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        margin-left: 20px;
+        padding: 8px 16px; /* Further adjust padding for very small screens */
+        font-size: 14px; /* Further adjust font size for very small screens */
+    }
+}
+    
 }
