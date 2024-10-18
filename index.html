@@ -2,32 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Official website of Mary L. Lumsden, featuring books, testimonials, and more.">
+    <meta property="og:title" content="Mary Lumsden - Author">
+    <meta property="og:description" content="Learn more about Mary L. Lumsden and her inspiring books.">
+    <meta property="og:image" content="authorimg.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mary Lumsden</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="animate.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="Logo"> <!-- Replace with your logo path -->
+            <img src="logo.png" alt="Logo"> <!-- Replace with your logo path -->
             <span>Mary L Lumsden</span>
-        </div>
-        <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
-        <nav id="navbar">
-            <ul>
-                <li> <div class="homepage"><a href="#">Home</a></div></li>
-                <li><a href="areyouoffendedyet.html">Are You Ofended Yet?</a></li>
-                <li><a href="dontbeoffended.html">Don't Be Offended</a></li>
-                
-                <li>
-                    <a href="#" class="submenu-toggle">Testimonials</a>
-                   
-                </li>
-                
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
+        </div><br>
+        <div class="hamburger" id="hamburger" aria-expanded="false" aria-label="Toggle navigation">
+    &#9776;
+</div> <!-- Hamburger icon -->
+<nav id="navbar" aria-hidden="true">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="areyouoffendedyet.html">Are You Offended Yet?</a></li>
+        <li><a href="dontbeoffended.html">Don't Be Offended</a></li>
+        <li><a href="#">Jesus is My King</a></li>
+        <li><a href="#" class="submenu-toggle">Testimonials</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
      
     </header>
 
@@ -41,19 +45,41 @@
     </section>
 
     <!-- Featured Book -->
+   
     <section class="featured-book">
-        <img src="book1.jpg" alt="Featured Book">
+        <div class="featbook">
+            <h2>Latest Book Releases</h2>
+        </div>
+        
+        <div class="book-images">
+            <div class="bookButimg">
+                <img src="book1.png" alt="Featured Book">
+                <a href="areyouoffendedyet.html" class="cta-button">Are You Offended Yet?</a>
+            </div>
+
+            <div class="bookButimg">
+                <img src="book1.jpg" alt="Featured Book">
+                <a href="#" class="cta-button">Don't Be Offended.</a>
+            </div>
+
+            <div class="bookButimg">
+                <img src="book1.jpg" alt="Featured Book">
+                <a href="#" class="cta-button">Jesus is My King</a>
+            </div>
+        </div>
+        
+        
         <div class="book-info">
-            <h2>Latest Release: Are You Offended Yet? You'll Soon Be Encouraged.</h2>
-            <p>The Poems helps remind us not to be so offended about things we and people 
+            <p><!--The Poems helps remind us not to be so offended about things we and people 
                 say and,or do. This is life as we've known it sense the beginning of the World. 
                 Everyone thinks differently, some more than others. So we can't spend the rest of
-                 our lives being offended or to make it more plain walking around with a chip on our shoulder.
-                  There is hope for this world and the lives we live. It is encouragement through the word of God. 
-                  And I always say, don't knock it until you've tried it. The word of God has never been wrong.</p>
-            <a href="https://www.amazon.com/Are-you-offended-yet-Encouraged/dp/B0CMLHZZGH" class="cta-button">Buy Now</a>
+                our lives being offended or to make it more plain walking around with a chip on our shoulder.
+                There is hope for this world and the lives we live. It is encouragement through the word of God. 
+                And I always say, don't knock it until you've tried it. The word of God has never been wrong.--></p>
+            
         </div>
     </section>
+    
 
     <!-- About the Author -->
     <section class="about">
@@ -82,6 +108,9 @@
         </div>
         <p>&copy; 2024 Mary L. Lumsden. All rights reserved.</p>
     </footer>
+
+
+    
 
     <script src="script.js"></script>
 </body>
