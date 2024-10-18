@@ -106,10 +106,11 @@ nav ul li a:hover {
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 100;
-    min-width: 150px;
+    min-width: 100px;
 }
-nav ul li.about-menu:hover .book-submenu {
-    display: block; /* Show the submenu when hovering over the parent */
+
+.book-submenu a{
+    font-size: 10px;
 }
 
 /* Show the submenu on hover */
@@ -120,7 +121,6 @@ nav ul li.book-but:hover .book-submenu {
 /* Submenu link styles */
 .book-submenu a {
     display: block; /* Stack submenu items */
-    font-size: 10px;
     color: #fff; /* Submenu link color */
     padding: 10px 20px; /* Padding for submenu links */
     text-decoration: none; /* No underline */
