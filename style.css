@@ -230,6 +230,15 @@ footer .social-links a:hover {
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+    .logo img {
+        width: 60px; /* Adjust logo size for smaller screens */
+    }
+
+    .logo span{
+        font-size: 50%;
+        color: #ec710d;
+    }
     .hamburger {
         display: block; /* Show hamburger icon on mobile */
     }
@@ -269,6 +278,7 @@ footer .social-links a:hover {
         width: 60px; /* Adjust logo size for smaller screens */
     }
 
+    
     .logo span{
         font-size: 50%;
         color: #ec710d;
