@@ -237,7 +237,6 @@ footer .social-links a:hover {
 
     .logo span{
         font-size: 50%;
-        color: #ec710d;
     }
     .hamburger {
         display: block; /* Show hamburger icon on mobile */
@@ -280,8 +279,8 @@ footer .social-links a:hover {
 
     
     .logo span{
-        font-size: 50%;
-        color: #ec710d;
+        font-size: 2rem;
+        
     }
 
     .cta-button {
