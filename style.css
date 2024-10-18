@@ -266,11 +266,11 @@ footer .social-links a:hover {
 
 @media (max-width: 480px) {
     .logo img {
-        width: 70px; /* Adjust logo size for smaller screens */
+        width: 60px; /* Adjust logo size for smaller screens */
     }
 
     .logo span{
-        font-size: 1.2rem;
+        font-size: 1rem;
         color: #ec710d;
     }
 
